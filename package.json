@@ -1,0 +1,32 @@
+{
+  "name": "lgp",
+  "version": "1.0.0",
+  "description": "lets get printing (lgp) helps read and write files for digitial fabrication",
+  "main": "lgp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezaali/lgp.js.git"
+  },
+  "keywords": [
+    "stl",
+    "obj",
+    "svg",
+    "reader",
+    "writer",
+    "digtical",
+    "fabrication",
+    "computational",
+    "design",
+    "geometry",
+    "ycam"
+  ],
+  "author": "Syed Reza Ali <syed.reza.ali@gmail.com> (http://www.syedrezaali.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rezaali/lgp.js/issues"
+  },
+  "homepage": "https://github.com/rezaali/lgp.js#readme"
+}
