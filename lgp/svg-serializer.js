@@ -1,4 +1,4 @@
-var normalize = require('./utils/normalize-array');
+var normalize = require('./guf/guf').normalizeArray;
 
 var width = -1.0; var height = -1.0;
 

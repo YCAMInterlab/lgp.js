@@ -1,5 +1,5 @@
-var normalize = require('./utils/normalize-array');
-var calculateNormals = require('./utils/vertex-normals');
+var normalize = require('./guf/guf').normalizeArray;
+var calculateNormals = require('./guf/guf').vertexNormals;
 
 module.exports = function( input ) {
   if( input.constructor === Array ) {

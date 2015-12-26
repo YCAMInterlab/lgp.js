@@ -1,11 +1,11 @@
-var normalize = require('./utils/normalize-array');
-var calculateNormals = require('./utils/face-normals');
+var normalize = require('./guf/guf').normalizeArray;
+var calculateNormals = require('./guf/guf').faceNormals;
 
 module.exports = function( input ) {
   if( input.constructor === Array ) {
     var output = "";
     for( var i = 0; i < input.length; i++ ) {
-       output += serialize( input[0], i );
+       output += serialize( input[ 0 ], i );
     }
     return output;
   }

@@ -1,7 +1,11 @@
 var cross = require('./cross');
 var normalize = require('./normalize');
+var normalizeArray = require('./normalize-array');
 
-module.exports = function( positions, cells ) {
+module.exports = function( verts, faces ) {
+  var positions = verts[0].constructor === Array ? normalizeArray( verts ) : verts;
+  var cells = faces[0].constructor === Array ? normalizeArray( faces ) : faces;
+
   //Create Vertex Face Map ( tells you which vert belong to what faces )
   var map = {};
   var plen = positions.length / 3;
