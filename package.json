@@ -2,7 +2,7 @@
   "name": "lgp",
   "version": "1.0.0",
   "description": "lets get printing (lgp) helps read and write files for digitial fabrication",
-  "main": "lgp.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/rezaali/lgp.js/issues"
   },
-  "homepage": "https://github.com/rezaali/lgp.js#readme"
+  "homepage": "https://github.com/rezaali/lgp.js#readme",
+  "dependencies": {
+    "guf": "^1.0.0"
+  }
 }

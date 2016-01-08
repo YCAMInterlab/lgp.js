@@ -1,5 +1,5 @@
-var normalize = require('./guf/guf').normalizeArray;
-var calculateNormals = require('./guf/guf').faceNormals;
+var normalize = require('guf').normalizeArray;
+var calculateNormals = require('guf').faceNormals;
 
 module.exports = function( input ) {
   if( input.constructor === Array ) {

@@ -1,6 +1,6 @@
-module.exports = function( filename, text ) {
+module.exports = function( filename, data ) {
     var pom = document.createElement( 'a' );
-    pom.setAttribute( "href", "data:text/plain;charset=utf-8," + encodeURIComponent( text ) );
+    pom.setAttribute( "href", "data:text/plain;charset=utf-8," + encodeURIComponent( data ) );
     pom.setAttribute( "download", filename );
 
     if( document.createEvent ) {

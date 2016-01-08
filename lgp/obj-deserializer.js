@@ -13,17 +13,17 @@ module.exports = function( input, opts ) {
   var ncells = [];
   var tcells = [];
 
-  var vRegex = /^v\s(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;
-  var vt2Regex = /^vt\s(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;                      //texcoord 2D
-  var vt3Regex = /^vt\s(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;   //texcoord 3D
-  var vnRegex = /^vn\s(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;       //normal
-  var fRegex = /^f\s(.*)/;                                                    //Find Face
+  var vRegex = /^v\s*(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;
+  var vt2Regex = /^vt\s*(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;                      //texcoord 2D
+  var vt3Regex = /^vt\s*(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;   //texcoord 3D
+  var vnRegex = /^vn\s*(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)[,|\s]?\s?(-?\d*\.?\d*e*[-\+]*\d*)\s*$/;       //normal
+  var fRegex = /^f\s*(.*)/;                                                    //Find Face
 
   var fv = /^(\d+)$/;                                                         //Found vertex
   var fvt = /^(\d+)\/(\d+)$/;                                                 //Found vertex texcoord
   var fvnt = /^(\d+)\/(\d+)\/(\d+)$/;                                         //Found vertex normal texcoord
   var fvn = /^(\d+)\/\/(\d+)$/;                                               //Found vertex normal
-  
+
   var lines = input.split( '\n' );
   var len = lines.length;
   var line, results;
