@@ -1,14 +1,15 @@
 module.exports = function( filename, data ) {
-    var pom = document.createElement( 'a' );
-    pom.setAttribute( "href", "data:text/plain;charset=utf-8," + encodeURIComponent( data ) );
-    pom.setAttribute( "download", filename );
+  var pom = document.createElement( 'a' );
+  pom.href = URL.createObjectURL( new Blob( [ data ], { type : 'text/plain'} ) );
+  pom.download = filename;
+  document.body.appendChild( pom );
 
-    if( document.createEvent ) {
-        var event = document.createEvent( 'MouseEvents' );
-        event.initEvent( 'click', true, true );
-        pom.dispatchEvent( event );
-    }
-    else {
-        pom.click();
-    }
+  if( document.createEvent ) {
+    var event = document.createEvent( 'MouseEvents' );
+    event.initEvent( 'click', true, true );
+    pom.dispatchEvent( event );
+  }
+  else {
+    pom.click();
+  }
 };
