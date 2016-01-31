@@ -1,6 +1,6 @@
 {
   "name": "lgp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "lets get printing (lgp) helps read and write files for digitial fabrication",
   "main": "index.js",
   "scripts": {
