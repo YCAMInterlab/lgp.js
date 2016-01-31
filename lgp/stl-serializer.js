@@ -19,8 +19,13 @@ function serialize( input, index ) {
     throw "Input Not Valid: Does not contain any positions or cells";
   }
   var name = input.name === undefined ? "model" + index : input.name;
-  var cells = input.cells[0].constructor === Array ? normalize( input.cells ) : input.cells;
-  var positions = input.positions[0].constructor === Array ? normalize( input.positions ) : input.positions;
+  var cells = input.cells[ 0 ].constructor === Array ? normalize( input.cells ) : input.cells;
+  var positions = input.positions;
+  var con = input.positions[ 0 ].constructor;
+  if( con === Array || con == Float32Array ) {
+    positions = normalize( input.positions );
+  }
+
   var normals = undefined;
   if( input.normals != undefined ) {
     normals = input.normals[0].constructor === Array ? normalize( input.normals ) : input.normals;

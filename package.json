@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/rezaali/lgp.js#readme",
   "dependencies": {
-    "guf": "^1.0.0"
+    "guf": "*"
   }
 }
