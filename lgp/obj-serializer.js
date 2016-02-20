@@ -47,7 +47,7 @@ function serialize( input, index ) {
     for( var i = 0; i < cells.length; i++ ) {
       var i0 = cells[ i ][ 0 ] + 1;
       var i1 = cells[ i ][ 1 ] + 1;
-      var i2 = cells[ i ][ 2 ] + 1; 
+      var i2 = cells[ i ][ 2 ] + 1;
       faces += "f " + i0 + "//" + i0 + " " + i1 + "//" + i1 + " " + i2 + "//" + i2 + "\n";
     }
   }
